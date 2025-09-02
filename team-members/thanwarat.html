@@ -1,264 +1,136 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <title>Hello6 - Profile</title>
+  <meta charset="UTF-8">
+  <title>hello6 :: โปรไฟล์ของฉัน</title>
   <style>
     body {
-      margin: 0;
-      background: url('https://i.imgur.com/qbWPOIQ.png') repeat;
-      font-family: Tahoma, sans-serif;
-      font-size: 12px;
+      background: url('https://i.pinimg.com/originals/77/40/e5/7740e5999b624540c48c76e4c8e12ee4.jpg');
       color: #fff;
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
     }
 
     .container {
-      width: 950px;
-      margin: 0 auto;
-      background-color: #1a1a1a;
-      border: 2px solid #ff9900;
-      padding: 10px;
+      width: 800px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      margin-top: 30px;
+      border: 2px solid #ff00cc;
+      box-shadow: 0 0 20px #ff00cc;
     }
 
-    .header {
-      background-color: #333;
-      padding: 10px;
-      color: #ff9900;
-      font-size: 18px;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .nav {
-      background-color: #ff9900;
-      padding: 6px 10px;
-    }
-
-    .nav a {
-      margin-right: 12px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-
-    .profile-top {
-      display: flex;
-      background-color: #2e2e2e;
-      padding: 10px;
-      margin-top: 10px;
-    }
-
-    .profile-pic {
-      width: 160px;
-      height: 160px;
-      background-color: #444;
-      background-image: url('https://i.imgur.com/z6CGC1X.jpeg'); /* รูปโปรไฟล์ */
-      background-size: cover;
-      background-position: center;
-      border: 3px solid #ff9900;
-    }
-
-    .profile-info {
-      margin-left: 20px;
-      flex: 1;
-    }
-
-    .profile-info h2 {
-      margin: 0;
-      color: #ffcc00;
-    }
-
-    .label {
-      font-weight: bold;
-      color: #ff9900;
-    }
-
-    .section {
-      margin-top: 15px;
-      background-color: #2e2e2e;
-      padding: 10px;
-      border: 1px solid #333;
-    }
-
-    .section h3 {
-      margin-top: 0;
-      color: #ffcc00;
-      border-bottom: 1px solid #ff9900;
-    }
-
-    .friends {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .friend {
-      width: 80px;
+    h1 {
+      font-size: 36px;
+      color: #ff00cc;
+      text-shadow: 2px 2px #000;
       text-align: center;
+      font-family: 'Impact', sans-serif;
     }
 
-    .friend img {
-      width: 70px;
-      height: 70px;
-      border: 2px solid #ff9900;
-    }
-
-    .footer {
-      text-align: center;
+    .profile {
+      display: flex;
+      gap: 20px;
       margin-top: 20px;
-      color: #ccc;
-      font-size: 11px;
     }
 
-    .stats-box {
-      background-color: #1a1a1a;
+    .profile img {
+      width: 200px;
+      border: 3px solid #00ccff;
+    }
+
+    .info {
+      flex-grow: 1;
+    }
+
+    .info h2 {
+      color: #00ccff;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 10px;
-      color: white;
-      margin-top: 10px;
-      border: 1px solid #ff9900;
+      border: 1px solid #fff;
     }
 
-    .stats-box .label {
-      display: inline-block;
-      width: 120px;
-      color: #ffcc00;
+    .stats p {
+      margin: 5px 0;
     }
 
-    .progress-bar {
-      display: inline-block;
-      width: 150px;
-      height: 10px;
-      background: #444;
-      border: 1px solid #ff9900;
-      margin-left: 5px;
-      position: relative;
-      top: 2px;
+    .comments {
+      margin-top: 30px;
     }
 
-    .progress-fill {
-      height: 100%;
-      background: orange;
+    .comment {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px dashed #ff00cc;
     }
 
-    .journal-entry {
-      font-size: 11px;
-      margin-left: 10px;
+    .comment p {
+      margin: 5px 0;
     }
 
-    .section h4 {
-      margin-bottom: 5px;
-      color: #ffcc00;
-      font-size: 13px;
+    footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 30px;
+      color: #ccc;
+    }
+
+    /* ซ่อน iframe เพลง */
+    iframe {
+      display: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔊 Music autoplay -->
-  <audio autoplay loop hidden>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
+  <!-- เพลงพื้นหลัง -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/fQLJ3D3t6zM?autoplay=1&loop=1&playlist=fQLJ3D3t6zM" allow="autoplay"></iframe>
 
   <div class="container">
-    <div class="header">
-      <div>Hello6 :: Profile</div>
-      <div>Welcome, NooM [ <a href="#" style="color:#ccc;">Log Out</a> ]</div>
-    </div>
+    <h1>hello6 :: โปรไฟล์ของ EMO_BOY_1990</h1>
 
-    <div class="nav">
-      <a href="#">Home</a>
-      <a href="#">My Profile</a>
-      <a href="#">Friends</a>
-      <a href="#">Messages</a>
-      <a href="#">Groups</a>
-      <input type="text" placeholder="Search..." style="float:right; padding:2px;">
-    </div>
-
-    <div class="profile-top">
-      <div class="profile-pic"></div>
-      <div class="profile-info">
-        <h2>KIM :: Profile (205 views)</h2>
-        <p><span class="label">Status:</span> ทำงานนนนนนน ไม่บ่นดีไหม++</p>
-        <p><span class="label">Website:</span> http://lifeisyours.hello6.com</p>
-        <p><span class="label">Sex / Age:</span> Male / 30</p>
-        <p><span class="label">Birthday:</span> December 22</p>
-        <p><span class="label">Location:</span> Thailand</p>
-        <p><span class="label">Relationship Status:</span> Single</p>
-        <p><span class="label">Religion:</span> Buddhist/Taoist</p>
-        <p><span class="label">Languages:</span> Thai</p>
-      </div>
-    </div>
-
-    <div class="section stats-box">
-      <h4>Stats</h4>
-      <p><span class="label">140 Friends</span> <span class="progress-bar"><span class="progress-fill" style="width: 70%;"></span></span></p>
-      <p><span class="label">387 Profile Views</span> <span class="progress-bar"><span class="progress-fill" style="width: 95%;"></span></span></p>
-      <p><span class="label">25 Photo Comments</span> <span class="progress-bar"><span class="progress-fill" style="width: 40%;"></span></span></p>
-      <p><span class="label">4 Fives</span> <span class="progress-bar"><span class="progress-fill" style="width: 20%;"></span></span></p>
-      <p><span class="label">19 Scraps</span> <span class="progress-bar"><span class="progress-fill" style="width: 35%;"></span></span></p>
-
-      <h4>Journal (View all 13)</h4>
-      <div class="journal-entry">Jun 10: ล่าฝันโฉมงาม</div>
-      <div class="journal-entry">Apr 15: นักเดินทาง</div>
-      <div class="journal-entry">Apr 3: Falling Slowly (Once OST)</div>
-    </div>
-
-    <div class="section">
-      <h3>Recent Updates</h3>
-      <p>-</p>
-    </div>
-
-    <div class="section">
-      <h3>About Me</h3>
-      <p>wE'rE oN tHE rOaD tO NoWhErE.</p>
-    </div>
-
-    <div class="section">
-      <h3>Interests</h3>
-      <p><span class="label">Favorite Movies:</span> RIN, Fast & Furious, Your Name</p>
-    </div>
-
-    <div class="section">
-      <h3>Common Friends</h3>
-      <div class="friends">
-        <div class="friend">
-          <img src="https://i.imgur.com/z6CGC1X.jpeg" alt="Oh">
-          <div>Oh</div>
-        </div>
-        <div class="friend">
-          <img src="https://i.imgur.com/z6CGC1X.jpeg" alt="Witcharpo">
-          <div>Witcharpo</div>
-        </div>
-        <div class="friend">
-          <img src="https://i.imgur.com/z6CGC1X.jpeg" alt="Vip">
-          <div>Vip</div>
+    <div class="profile">
+      <img src="https://i.imgur.com/GfN6Nfu.jpg" alt="emo profile pic">
+      <div class="info">
+        <h2>ชื่อ: ดาร์คคุง</h2>
+        <p>อายุ: 17</p>
+        <p>สถานะ: เศร้าแต่เท่</p>
+        <p>คำคม: "ความเจ็บคือเพื่อนฉัน..."</p>
+        <div class="stats">
+          <h3>สถิติ</h3>
+          <p>เพื่อนทั้งหมด: 666</p>
+          <p>ยอดเข้าชม: 13,131</p>
+          <p>คอมเมนต์: 99</p>
+          <p>เพลงโปรด: ไม่มีเธอ - Retrospect</p>
         </div>
       </div>
     </div>
 
-    <div class="section">
-      <h3>Friends</h3>
-      <div class="friends">
-        <div class="friend">
-          <img src="https://i.imgur.com/z6CGC1X.jpeg" alt="Chalattorn">
-          <div>Chalattorn</div>
-        </div>
-        <div class="friend">
-          <img src="https://i.imgur.com/z6CGC1X.jpeg" alt="Monthira">
-          <div>Monthira</div>
-        </div>
-        <div class="friend">
-          <img src="https://i.imgur.com/z6CGC1X.jpeg" alt="Proud">
-          <div>Proud</div>
-        </div>
+    <div class="comments">
+      <h2>คอมเมนต์ล่าสุด</h2>
+      <div class="comment">
+        <p><strong>DarkAngel_xoxo:</strong> โหดสุดพี่ชาย ชอบเพลงนี้เลย</p>
+      </div>
+      <div class="comment">
+        <p><strong>xXx_SADGIRL_xXx:</strong> คำคมแทงใจ ฮือ TT</p>
+      </div>
+      <div class="comment">
+        <p><strong>emoBoiTH:</strong> ยังฟัง Retrospect อยู่เลย คิดถึงสมัยนั้น</p>
       </div>
     </div>
 
-    <div class="footer">
-      Hello6 © 2025 | Inspired by Hi5 🌺
-    </div>
+    <footer>
+      &copy; 2005-2025 hello6.com 
+    </footer>
   </div>
-
 </body>
 </html>
