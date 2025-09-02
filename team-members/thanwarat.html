@@ -109,6 +109,47 @@
       color: #ccc;
       font-size: 11px;
     }
+
+    .stats-box {
+      background-color: #1a1a1a;
+      padding: 10px;
+      color: white;
+      margin-top: 10px;
+      border: 1px solid #ff9900;
+    }
+
+    .stats-box .label {
+      display: inline-block;
+      width: 120px;
+      color: #ffcc00;
+    }
+
+    .progress-bar {
+      display: inline-block;
+      width: 150px;
+      height: 10px;
+      background: #444;
+      border: 1px solid #ff9900;
+      margin-left: 5px;
+      position: relative;
+      top: 2px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: orange;
+    }
+
+    .journal-entry {
+      font-size: 11px;
+      margin-left: 10px;
+    }
+
+    .section h4 {
+      margin-bottom: 5px;
+      color: #ffcc00;
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
@@ -139,6 +180,20 @@
         <p><span class="label">Languages:</span> Thai</p>
         <p><span class="label">Relationship:</span> Single</p>
       </div>
+    </div>
+
+    <div class="section stats-box">
+      <h4>Stats</h4>
+      <p><span class="label">140 Friends</span> <span class="progress-bar"><span class="progress-fill" style="width: 70%;"></span></span></p>
+      <p><span class="label">387 Profile Views</span> <span class="progress-bar"><span class="progress-fill" style="width: 95%;"></span></span></p>
+      <p><span class="label">25 Photo Comments</span> <span class="progress-bar"><span class="progress-fill" style="width: 40%;"></span></span></p>
+      <p><span class="label">4 Fives</span> <span class="progress-bar"><span class="progress-fill" style="width: 20%;"></span></span></p>
+      <p><span class="label">19 Scraps</span> <span class="progress-bar"><span class="progress-fill" style="width: 35%;"></span></span></p>
+
+      <h4>Journal (View all 13)</h4>
+      <div class="journal-entry">Jun 10: ล่าฝันโฉมงาม</div>
+      <div class="journal-entry">Apr 15: นักเดินทาง</div>
+      <div class="journal-entry">Apr 3: Falling Slowly (Once OST)</div>
     </div>
 
     <div class="section">
