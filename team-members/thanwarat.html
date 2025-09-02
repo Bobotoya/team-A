@@ -1,203 +1,213 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello6 - EMO Profile</title>
-  <style>
-    body {
-      font-family: Tahoma, sans-serif;
-      background-color: #1a1a1a;
-      color: #ffffff;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8" />
+<title>hello6 - โปรไฟล์แบบ Hi5 ยุค 2000s</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: #111;
+    color: #eee;
+    background-image: url('https://i.imgur.com/mz6mF9C.png'); /* ดอกไม้แนวอีโม */
+    background-repeat: repeat;
+  }
 
-    .topbar {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: right;
-      font-size: 12px;
-    }
+  a {
+    color: #ff66cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    .navbar {
-      background-color: #222;
-      color: white;
-      display: flex;
-      padding: 10px;
-      justify-content: space-between;
-      font-size: 14px;
-    }
+  .header {
+    background-color: #220022;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-bottom: 2px solid #ff66cc;
+  }
 
-    .navbar a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
+  .header a {
+    color: #ff99dd;
+  }
 
-    .container {
-      display: flex;
-      max-width: 1000px;
-      margin: auto;
-      background-color: #2c2c2c;
-      padding: 20px;
-      margin-top: 10px;
-    }
+  .navbar {
+    background-color: #330033;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #550055;
+  }
 
-    .left-col {
-      width: 300px;
-      padding-right: 20px;
-      border-right: 1px solid #444;
-    }
+  .navbar a {
+    margin-right: 15px;
+    color: #ff66cc;
+    font-weight: bold;
+  }
 
-    .left-col img {
-      width: 100%;
-      border: 3px solid #555;
-    }
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #220022;
+    border: 3px solid #ff66cc;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-    .left-col .profile-info {
-      margin-top: 10px;
-      font-size: 13px;
-    }
+  .left-sidebar {
+    float: left;
+    width: 280px;
+    border-right: 1px solid #ff66cc;
+    padding-right: 15px;
+  }
 
-    .left-col .profile-info p {
-      margin: 5px 0;
-    }
+  .left-sidebar img {
+    width: 260px;
+    border: 4px solid #ff66cc;
+    margin-bottom: 15px;
+  }
 
-    .right-col {
-      flex-grow: 1;
-      padding-left: 20px;
-      font-size: 13px;
-    }
+  .profile-info {
+    font-size: 12px;
+    color: #ff99dd;
+  }
+  .profile-info p {
+    margin: 6px 0;
+  }
 
-    .section {
-      margin-bottom: 20px;
-      background-color: #1f1f1f;
-      padding: 10px;
-      border: 1px solid #444;
-    }
+  .right-content {
+    margin-left: 300px;
+    font-size: 13px;
+    color: #eeccff;
+  }
 
-    .section h3 {
-      margin-top: 0;
-      color: #ff00cc;
-      font-size: 14px;
-      border-bottom: 1px solid #555;
-      padding-bottom: 5px;
-    }
+  .section {
+    margin-bottom: 20px;
+    border: 1px solid #ff66cc;
+    background: #330033;
+    padding: 12px;
+    box-sizing: border-box;
+  }
 
-    .stats-bar {
-      display: flex;
-      gap: 10px;
-      font-size: 12px;
-    }
+  .section h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #ff99dd;
+    border-bottom: 1px solid #ff66cc;
+    padding-bottom: 5px;
+  }
 
-    .stats-bar div {
-      flex: 1;
-      background: #333;
-      padding: 5px;
-      border: 1px solid #666;
-      text-align: center;
-    }
+  .stats-table {
+    width: 100%;
+    font-size: 12px;
+    color: #ffccff;
+  }
+  .stats-table td {
+    padding: 5px;
+    vertical-align: top;
+  }
 
-    .friends-list img {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      margin: 3px;
-      border: 2px solid #555;
-    }
+  .friends-list img {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #ff66cc;
+    margin: 3px;
+    object-fit: cover;
+    filter: drop-shadow(0 0 5px #ff66cc);
+  }
 
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #999;
-      margin: 20px 0;
-    }
-
-    /* ซ่อน iframe เพลง */
-    iframe {
-      display: none;
-    }
-  </style>
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
 </head>
 <body>
 
-  <!-- เพลงพื้นหลัง -->
-  <iframe width="0" height="0" src="https://www.youtube.com/embed/fQLJ3D3t6zM?autoplay=1&loop=1&playlist=fQLJ3D3t6zM" allow="autoplay"></iframe>
+<!-- เพลงพื้นหลังจาก YouTube ฝังแบบ iframe (เล่นอัตโนมัติ และวนซ้ำ) -->
+<iframe width="0" height="0" src="https://www.youtube.com/embed/sliitz3PSHI?autoplay=1&loop=1&playlist=sliitz3PSHI&controls=0&mute=0" frameborder="0" allow="autoplay" allowfullscreen></iframe>
 
-  <!-- Topbar -->
-  <div class="topbar">
-    Welcome, EMO_BOY_1990 | <a href="#" style="color:#aaa;">Logout</a>
-  </div>
+<!-- Header -->
+<div class="header">
+  hello6 | Welcome, <strong>EMO_BOY_1990</strong> | <a href="#">Log Out</a>
+</div>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div>
-      <a href="#">Profile</a>
-      <a href="#">Photos</a>
-      <a href="#">Videos</a>
-      <a href="#">Friends</a>
-      <a href="#">Journal</a>
-    </div>
-    <div>
-      <input type="text" placeholder="Search..." style="padding:3px;">
-    </div>
-  </div>
+<!-- Navbar -->
+<div class="navbar">
+  <a href="#">My Profile</a>
+  <a href="#">Photos</a>
+  <a href="#">Videos</a>
+  <a href="#">Friends</a>
+  <a href="#">Journal</a>
+</div>
 
-  <!-- Layout -->
-  <div class="container">
-    <!-- Left Column -->
-    <div class="left-col">
-      <img src="https://i.imgur.com/GfN6Nfu.jpg" alt="emo profile">
-      <div class="profile-info">
-        <p><strong>Status:</strong> โลกมันโหด คนเลยโสด</p>
-        <p><strong>Sex:</strong> Male</p>
-        <p><strong>Age:</strong> 17</p>
-        <p><strong>Location:</strong> Bangkok, Thailand</p>
-        <p><strong>Religion:</strong> Emoism</p>
-        <p><strong>Looking for:</strong> คนเข้าใจ 😞</p>
-      </div>
-    </div>
-
-    <!-- Right Column -->
-    <div class="right-col">
-      <div class="section">
-        <h3>Stats</h3>
-        <div class="stats-bar">
-          <div>Friends<br>512</div>
-          <div>Comments<br>179</div>
-          <div>Scraps<br>17</div>
-          <div>Views<br>13,131</div>
-        </div>
-      </div>
-
-      <div class="section">
-        <h3>Journal</h3>
-        <p>🖤 "ไม่มีเธอ เหมือนไม่มีลมหายใจ..."</p>
-        <p><em>- โพสต์เมื่อ 02 กันยายน 2025</em></p>
-      </div>
-
-      <div class="section">
-        <h3>Friends (ตัวอย่าง)</h3>
-        <div class="friends-list">
-          <img src="https://i.pravatar.cc/50?img=11" alt="friend">
-          <img src="https://i.pravatar.cc/50?img=12" alt="friend">
-          <img src="https://i.pravatar.cc/50?img=13" alt="friend">
-          <img src="https://i.pravatar.cc/50?img=14" alt="friend">
-          <img src="https://i.pravatar.cc/50?img=15" alt="friend">
-        </div>
-      </div>
-
-      <div class="section">
-        <h3>Recent Comments</h3>
-        <p><strong>xXx_Pain_xXx:</strong> ชอบธีมนี้ emo สุด ๆ 🖤</p>
-        <p><strong>SADGIRL_99:</strong> เพลงนี้ยังฟังอยู่เลย TT</p>
-      </div>
+<!-- Main container -->
+<div class="container clearfix">
+  <!-- Left Sidebar -->
+  <div class="left-sidebar">
+    <img src="https://i.imgur.com/GfN6Nfu.jpg" alt="โปรไฟล์" />
+    <div class="profile-info">
+      <p><b>Status:</b> โลกมันโหด คนเลยโสด</p>
+      <p><b>Sex:</b> Male</p>
+      <p><b>Age:</b> 17</p>
+      <p><b>Birthday:</b> October 10</p>
+      <p><b>Location:</b> Chonburi, Thailand</p>
+      <p><b>Hometown:</b> Bangkok</p>
+      <p><b>Relationship Status:</b> Single</p>
+      <p><b>Looking For:</b> Friends, Just look around</p>
     </div>
   </div>
 
-  <footer>
-    © 2005-2025 hello6.com - จำลองระบบเพื่อความคิดถึง Hi5
-  </footer>
+  <!-- Right Content -->
+  <div class="right-content">
+    <!-- Stats -->
+    <div class="section">
+      <h2>Stats</h2>
+      <table class="stats-table">
+        <tr><td>Friends:</td><td>513</td></tr>
+        <tr><td>Profile Comments:</td><td>479</td></tr>
+        <tr><td>Photo Comments:</td><td>1</td></tr>
+        <tr><td>Files:</td><td>12</td></tr>
+        <tr><td>Scraps:</td><td>15</td></tr>
+      </table>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="section">
+      <h2>Contact Info</h2>
+      <p>virgo_t_october@hotmail.com</p>
+    </div>
+
+    <!-- Journal -->
+    <div class="section">
+      <h2>Journal</h2>
+      <p>ไม่มีเธอ เหมือนไม่มีลมหายใจ...</p>
+      <p><i>โพสต์เมื่อ 2 กันยายน 2025</i></p>
+    </div>
+
+    <!-- Friends -->
+    <div class="section">
+      <h2>Friends</h2>
+      <div>
+        <img src="https://i.pravatar.cc/60?img=11" alt="friend1" />
+        <img src="https://i.pravatar.cc/60?img=12" alt="friend2" />
+        <img src="https://i.pravatar.cc/60?img=13" alt="friend3" />
+        <img src="https://i.pravatar.cc/60?img=14" alt="friend4" />
+        <img src="https://i.pravatar.cc/60?img=15" alt="friend5" />
+        <img src="https://i.pravatar.cc/60?img=16" alt="friend6" />
+      </div>
+    </div>
+
+    <!-- Recent Comments -->
+    <div class="section">
+      <h2>Recent Comments</h2>
+      <p><b>DarkAngel_xoxo:</b> โหดสุดพี่ชาย ชอบเพลงนี้เลย</p>
+      <p><b>xXx_SADGIRL_xXx:</b> คำคมแทงใจ ฮือ TT</p>
+      <p><b>emoBoiTH:</b> ยังฟัง Retrospect อยู่เลย คิดถึงสมัยนั้น</p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
