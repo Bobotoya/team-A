@@ -1,129 +1,407 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello6 - โปรไฟล์ของฉัน (Emo Style)</title>
-    <style>
-        body {
-            background-color: #111;
-            font-family: 'Tahoma', sans-serif;
-            color: #eee;
-            margin: 0;
-            padding: 0;
-            background-image: url('https://i.imgur.com/9X6R58I.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
+  <meta charset="UTF-8" />
+  <title>Hello6 - thw4nwxr4t</title>
+  <style>
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .header {
-            background-color: #660000;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-            font-size: 32px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px black;
-        }
+    body {
+      font-family: Tahoma, sans-serif;
+      background: black url('images/background.jpg') repeat;
+      color: white;
+      position: relative;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: 30px auto;
-            background-color: rgba(0, 0, 0, 0.75);
-            border: 2px solid #990000;
-            padding: 20px;
-            border-radius: 10px;
-        }
+    .top-bar, .header, .menu {
+      max-width: 960px; /* กำหนดความกว้างสูงสุด */
+      margin: 0 auto; /* จัดกึ่งกลาง */
+    }
 
-        .profile-pic {
-            float: left;
-            margin-right: 20px;
-            border: 3px solid #990000;
-            border-radius: 10px;
-        }
+    .top-bar {
+      background-color: #222; /* สีเทาเข้ม */
+      padding: 5px 20px;
+      font-size: 14px;
+      color: #ccc;
+      position: relative;
+      z-index: 10;
+    }
 
-        .info {
-            overflow: auto;
-        }
+    .top-bar a {
+      color: #b0b0b0; /* สีเทาอ่อน */
+      margin-right: 10px;
+      text-decoration: none;
+    }
 
-        .info h2 {
-            margin: 0 0 10px 0;
-            color: #ff4444;
-            font-family: 'Courier New', monospace;
-        }
+    .header {
+      background-color: black;
+      color: #ff4c4c; /* สีแดงเข้ม */
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 10;
+    }
 
-        .info p {
-            margin: 5px 0;
-        }
+    .menu {
+      background-color: #333; /* สีเทาเข้ม */
+      padding: 8px;
+      position: relative;
+      z-index: 10;
+    }
 
-        .section {
-            margin-top: 30px;
-        }
+    .menu a {
+      color: #ff4c4c; /* สีแดงเข้ม */
+      font-weight: bold;
+      margin-right: 15px;
+      text-decoration: none;
+    }
 
-        .section h3 {
-            color: #ff4444;
-            border-bottom: 1px dashed #660000;
-            padding-bottom: 5px;
-            font-family: 'Courier New', monospace;
-        }
+    /* แก้ไขจัดกึ่งกลาง container */
+    .container {
+      display: flex;
+      justify-content: center; /* กึ่งกลางแนวนอน */
+      padding: 20px;
+      box-sizing: border-box;
+      max-width: 960px; /* กำหนดความกว้างไม่เต็มจอ */
+      margin: 0 auto; /* กึ่งกลางหน้าจอ */
+    }
 
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 12px;
-            color: #666;
-        }
+    .left {
+      display: none; /* ซ่อนช่องว่างซ้าย */
+    }
 
-        a {
-            color: #ff9999;
-            text-decoration: none;
-        }
+    .right {
+      max-width: 700px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* จัดกึ่งกลางในคอลัมน์ */
+      margin: 0 auto;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .box {
+      background-color: #333; /* สีเทาเข้ม */
+      border: 2px solid #ff4c4c; /* สีแดงเข้ม */
+      margin-bottom: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
 
-        img {
-            border: 2px solid #333;
-            border-radius: 5px;
-        }
-    </style>
+    .box h3 {
+      margin-top: 0;
+      color: #ff4c4c; /* สีแดงเข้ม */
+      font-size: 16px;
+      border-bottom: 1px dashed #ff4c4c; /* ขอบแดง */
+      padding-bottom: 5px;
+    }
+
+    .profile-pic {
+      width: 100%;
+      border: 3px solid #ff4c4c; /* ขอบสีแดงเข้ม */
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      padding: 10px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ปุ่มเล่นเพลง */
+    #btnPlay {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #ff4c4c; /* สีแดงเข้ม */
+      color: black;
+      border: none;
+      padding: 8px 12px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 20;
+      border-radius: 5px;
+      display: none;
+    }
+
+    /* กลิตเตอร์ลอย */
+    .glitter {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://i.imgur.com/IxgvDO3.gif');
+      background-size: cover;
+      pointer-events: none;
+      animation: float 6s linear infinite;
+      opacity: 0.8;
+      z-index: -1; /* อยู่ข้างหลัง */
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* กลิตเตอร์ข้อความ */
+    @keyframes glitter {
+      0%, 100% {
+        text-shadow:
+          0 0 5px #fff,
+          0 0 10px #ff66cc,
+          0 0 20px #ff66cc,
+          0 0 30px #ff66cc,
+          0 0 40px #ff66cc,
+          0 0 50px #ff66cc,
+          0 0 60px #ff66cc;
+        opacity: 1;
+      }
+      50% {
+        text-shadow:
+          0 0 2px #fff,
+          0 0 5px #ff99cc,
+          0 0 10px #ff99cc,
+          0 0 15px #ff99cc,
+          0 0 20px #ff99cc,
+          0 0 25px #ff99cc,
+          0 0 30px #ff99cc;
+        opacity: 0.7;
+      }
+    }
+
+    .glitter-text {
+      animation: glitter 2s infinite ease-in-out;
+      color: #ff66cc; /* สีม่วงอมชมพู */
+      font-weight: bold;
+      user-select: none;
+    }
+
+    /* รวมกล่อง Stats, Profile Info, Profile Pic */
+    .combined-box {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+      border: 2px solid #ff4c4c; /* ขอบสีแดงเข้ม */
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      background-color: #333; /* สีเทาเข้ม */
+    }
+
+    .profilepic-box {
+      flex: 1;
+      max-width: 300px;
+      border-right: 1px solid #ff4c4c; /* ขอบสีแดงเข้ม */
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+
+    .profileinfo-box {
+      flex: 2;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border-right: 1px solid #ff4c4c; /* ขอบสีแดงเข้ม */
+    }
+
+    .stats-box {
+      flex: 1;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+
+    /* ตาราง Profile Info */
+    table.info-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: white;
+    }
+
+    table.info-table td {
+      padding: 4px 8px;
+      vertical-align: top;
+    }
+
+    table.info-table td.label {
+      width: 40%;
+      font-weight: bold;
+      color: #ff4c4c; /* สีแดงเข้ม */
+      white-space: nowrap;
+    }
+
+    table.info-table td.value {
+      width: 60%;
+    }
+
+    a.special-link {
+      color: #ff66cc; /* สีม่วงอมชมพู */
+      text-decoration: underline;
+    }
+
+    /* เพื่อนรูปสี่เหลี่ยม */
+    .friends-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .friend-item {
+      text-align: center;
+    }
+
+    .friend-pic {
+      width: 100px; /* กำหนดความกว้าง */
+      height: 100px; /* กำหนดความสูง */
+      object-fit: cover;
+      border: 2px solid #ff4c4c; /* ขอบสีแดงเข้ม */
+      border-radius: 0; /* เปลี่ยนจากวงกลมเป็นสี่เหลี่ยม */
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        🖤 Hello6: Welcome to My Dark World 🖤
+
+  <button id="btnPlay">▶️ เล่นเพลง</button>
+
+  <div class="top-bar">
+    Hello6 | My Profile | Friends | Messages | Logout
+  </div>
+
+  <div class="header">
+    Thanwarat Pantharot :: Profile (205 views)
+  </div>
+
+  <div class="menu">
+    <a href="#">Profile</a>
+    <a href="#">Friends</a>
+    <a href="#">Photos</a>
+    <a href="#">Scrapbook</a>
+    <a href="#">Journal</a>
+    <a href="#">Groups</a>
+  </div>
+  <div class="container">
+    <div class="left">
+      <!-- Left empty per design, now hidden -->
     </div>
 
-    <div class="container">
-        <div class="info">
-            <img src="https://i.imgur.com/YOUR_EMO_IMAGE.jpg" alt="รูปโปรไฟล์" width="150" class="profile-pic">
-            <h2>n0OnExUndeRstandzMe</h2>
-            <p><strong>อายุ:</strong> 21</p>
-            <p><strong>สถานะ:</strong> ดิ่งอยู่ 😢</p>
-            <p><strong>จังหวัด:</strong> โลกมืด</p>
-            <p><strong>แนะนำตัว:</strong> ไม่มีใครเห็นน้ำตาในความมืด...</p>
+    <div class="right">
+      <div class="combined-box">
+        <div class="profilepic-box">
+          <img src="IMG_8956.jpg" class="profile-pic" alt="Profile Pic" />
+          <p><a href="#">Send Message</a></p>
+          <p><a href="#">Leave Comment</a></p>
+          <p><a href="#">Add to Favorites</a></p>
+          <p><a href="#">Use This Skin</a></p>
         </div>
 
-        <div class="section">
-            <h3>🎵 เพลงโปรดของฉัน</h3>
-            <iframe width="100%" height="100" src="https://www.youtube.com/watch?v=sliitz3PSHI" frameborder="0" allowfullscreen></iframe>
+        <div class="profileinfo-box">
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label">Status:</td><td class="value">ไม่มีใครเห็นน้ำตาในความมืด...</td></tr>
+              <tr><td class="label">Sex / Age</td><td class="value">Male / 20</td></tr>
+              <tr><td class="label">Birthday</td><td class="value">November 21</td></tr>
+              <tr><td class="label">Location</td><td class="value">โลกมืด</td></tr>
+              <tr><td class="label">Relationship Status</td><td class="value">ดิ่งอยู่ 😢</td></tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="section">
-            <h3>📸 ภาพแห่งความทรงจำ</h3>
-            <img src="https://i.imgur.com/qbw7FNd.jpg" width="100">
-            <img src="https://i.imgur.com/bB2K9bi.jpg" width="100">
-            <img src="https://i.imgur.com/MkkJADz.jpg" width="100">
+        <div class="stats-box">
+          <h3>Stats</h3>
+          <p>Friends: 140</p>
+          <p>Views: 387</p>
+          <p>Photos: 25</p>
+          <p>Scraps: 19</p>
         </div>
+      </div>
 
-        <div class="section">
-            <h3>💬 ทิ้งคำพูดสุดท้ายไว้ก่อนหายไป</h3>
-            <p><a href="#">ฝากคำไว้ในสมุดความทรงจำ...</a></p>
+      <div class="box">
+        <h3>Recent Updates</h3>
+        <p>Jun 10: ลากันด้วยเพลง</p>
+        <p>Apr 15: นักเดินทาง</p>
+        <p>Apr 3: Falling Slowly (OST)</p>
+      </div>
+
+      <div class="box">
+        <h3>Friends</h3>
+        <div class="friends-list">
+          <div class="friend-item">
+            <img src="friend1.jpg" alt="Friend 1" class="friend-pic" />
+            <p>Oh</p>
+          </div>
+          <div class="friend-item">
+            <img src="friend2.jpg" alt="Friend 2" class="friend-pic" />
+            <p>Witoon</p>
+          </div>
+          <div class="friend-item">
+            <img src="friend3.jpg" alt="Friend 3" class="friend-pic" />
+            <p>VIP</p>
+          </div>
+          <div class="friend-item">
+            <img src="friend4.jpg" alt="Friend 4" class="friend-pic" />
+            <p>chalattorn</p>
+          </div>
+          <div class="friend-item">
+            <img src="friend5.jpg" alt="Friend 5" class="friend-pic" />
+            <p>Proud</p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
-    <div class="footer">
-        Hello6 © 2025 | Emo never dies 🕯️
-    </div>
+  <div class="footer">
+    <span class="glitter-text">Hello6 © 2025 | กลับสู่ความทรงจำของยุค Hi5 ✨</span>
+  </div>
+
+  <audio id="bgmusic" autoplay loop muted hidden>
+    <source src="../thanwarat/Retrospect.mp3" type="audio/mpeg" />
+    เบราว์เซอร์ของคุณไม่รองรับการเล่นเสียง
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bgmusic');
+    const btnPlay = document.getElementById('btnPlay');
+
+    window.addEventListener('load', () => {
+      audio.muted = false;
+      audio.play().catch(() => {
+        btnPlay.style.display = 'inline-block';
+      });
+    });
+
+    btnPlay.addEventListener('click', () => {
+      audio.play();
+      btnPlay.style.display = 'none';
+    });
+
+    // สร้างกลิตเตอร์ลอย
+    for (let i = 0; i < 20; i++) {
+      let glitter = document.createElement("div");
+      glitter.className = "glitter";
+      glitter.style.left = Math.random() * 100 + "vw";
+      glitter.style.top = Math.random() * 100 + "vh";
+      glitter.style.animationDelay = Math.random() * 5 + "s";
+      glitter.style.animationDuration = 5 + Math.random() * 5 + "s";
+      document.body.appendChild(glitter);
+    }
+  </script>
 </body>
 </html>
+
