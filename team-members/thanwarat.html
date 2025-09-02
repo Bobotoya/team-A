@@ -1,118 +1,143 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>โปรไฟล์แนวอีโม</title>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    background: #1a1a1a url('https://i.imgur.com/Vl7zBYP.png') repeat; /* ดอกไม้พื้นหลัง */
-    color: #e0e0e0;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background-color: #2d2d2d;
-    padding: 15px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #ff3366;
-    text-shadow: 0 0 5px #ff3366;
-  }
-  .profile {
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #222;
-    border: 2px solid #ff3366;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  .profile img {
-    width: 150px;
-    border-radius: 10px;
-    border: 3px solid #ff3366;
-  }
-  .info {
-    margin-left: 180px;
-    position: relative;
-    top: -150px;
-    color: #ff66aa;
-  }
-  .info h2 {
-    margin-top: 0;
-    font-size: 2em;
-    text-shadow: 0 0 5px #ff3366;
-  }
-  .info p {
-    font-size: 1.1em;
-    line-height: 1.5em;
-  }
-  .friends {
-    margin-top: 30px;
-  }
-  .friends h3 {
-    border-bottom: 2px solid #ff3366;
-    padding-bottom: 5px;
-    color: #ff3366;
-  }
-  .friends-list {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-  .friend {
-    width: 90px;
-    text-align: center;
-    color: #ff99bb;
-  }
-  .friend img {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-    border: 2px solid #ff3366;
-    object-fit: cover;
-  }
-  footer {
-    text-align: center;
-    margin: 20px;
-    color: #666;
-    font-size: 0.9em;
-  }
-</style>
+  <meta charset="UTF-8">
+  <title>Hi5 Emo Profile</title>
+  <style>
+    body {
+      background: url('https://i.imgur.com/pEv7ivb.png') repeat;
+      font-family: Tahoma, sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      width: 900px;
+      margin: auto;
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border: 3px solid #ff3399;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #ff66cc;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .profile-pic {
+      float: left;
+      margin-right: 20px;
+      border: 3px solid #ff3399;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .info {
+      overflow: hidden;
+    }
+
+    .info h2 {
+      margin: 0;
+      color: #ff99cc;
+      text-shadow: 1px 1px #000;
+    }
+
+    .info p {
+      margin: 5px 0;
+      color: #ffccff;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .section h3 {
+      border-bottom: 2px solid #ff3399;
+      padding-bottom: 5px;
+      color: #ff66cc;
+      text-shadow: 1px 1px #000;
+    }
+
+    .friends {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .friend {
+      text-align: center;
+      width: 100px;
+    }
+
+    .friend img {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #ff3399;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
 
-<header>โปรไฟล์ของ NÜTēnč</header>
+<div class="wrapper">
+  <div class="header">NÜTëñč : EMO ZONE</div>
 
-<div class="profile">
-  <img src="https://i.imgur.com/xPn8aVa.jpg" alt="โปรไฟล์ภาพ" />
-  <div class="info">
-    <h2>NÜTēnč</h2>
-    <p><strong>เพศ:</strong> ชาย</p>
-    <p><strong>วันเกิด:</strong> 10 ตุลาคม</p>
-    <p><strong>สถานที่:</strong> ชลบุรี, ไทยแลนด์</p>
-    <p><strong>สถานะความสัมพันธ์:</strong> เปิดความสัมพันธ์</p>
-    <p><strong>มองหา:</strong> เพื่อน, แค่ดูเฉยๆ</p>
-  </div>
+  <div class="profile">
+    <img src="https://i.imgur.com/xPn8aVa.jpg" class="profile-pic" alt="โปรไฟล์">
 
-  <div class="friends">
-    <h3>เพื่อน</h3>
-    <div class="friends-list">
-      <div class="friend"><img src="https://i.imgur.com/9xZrW2J.jpg" alt="เพื่อน1" /><br />โบโบ</div>
-      <div class="friend"><img src="https://i.imgur.com/Iz5xS5Q.jpg" alt="เพื่อน2" /><br />ฟาง</div>
-      <div class="friend"><img src="https://i.imgur.com/ZzjH6aN.jpg" alt="เพื่อน3" /><br />แป้ง</div>
-      <div class="friend"><img src="https://i.imgur.com/tn8T0WQ.jpg" alt="เพื่อน4" /><br />พลอย</div>
+    <div class="info">
+      <h2>ชื่อ: NÜTëñč</h2>
+      <p>เพศ: หญิง</p>
+      <p>วันเกิด: 10 ต.ค.</p>
+      <p>สถานะ: โสดแต่เศร้า 😢</p>
+      <p>ศาสนา: พุทธ</p>
+      <p>มองหา: เพื่อน คนรู้ใจ 💔</p>
     </div>
   </div>
+
+  <div class="section">
+    <h3>เพื่อนรัก</h3>
+    <div class="friends">
+      <div class="friend">
+        <img src="https://i.imgur.com/ZzjH6aN.jpg" alt="เพื่อน1">
+        <div>ฟาง</div>
+      </div>
+      <div class="friend">
+        <img src="https://i.imgur.com/Iz5xS5Q.jpg" alt="เพื่อน2">
+        <div>ปุ๊ก</div>
+      </div>
+      <div class="friend">
+        <img src="https://i.imgur.com/9xZrW2J.jpg" alt="เพื่อน3">
+        <div>จูน</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>เพลงของฉัน</h3>
+    <audio controls autoplay loop>
+      <source src="https://cdn.kapook.com/music/mp3/retrospect-meem-thoe.mp3" type="audio/mpeg">
+      ไม่รองรับเบราว์เซอร์ของคุณ
+    </audio>
+  </div>
+
+  <footer>
+    © 2009 - 2025 by NÜTëñč | โลกใบนี้มันโหดร้าย แต่ใจยังอีโมอยู่ 💀
+  </footer>
 </div>
-
-<footer>สร้างด้วยใจรักในยุคอีโม</footer>
-
-<audio autoplay loop>
-  <source src="https://www.youtube.com/watch?v=sliitz3PSHI" type="audio/mpeg" />
-</audio>
 
 </body>
 </html>
