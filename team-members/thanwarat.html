@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello6 - thw4nwxr4t</title>
+  <title>Hello6 - โปรไฟล์แบบ Hi5</title>
   <style>
     html, body {
       height: 100%;
@@ -15,7 +15,7 @@
 
     body {
       font-family: Tahoma, sans-serif;
-      background: black url('images/background.jpg') repeat;
+      background: black url('06c3d2af2d7e92ada3c5d3f0410cb568.gif') repeat;
       color: white;
       position: relative;
     }
@@ -27,11 +27,12 @@
 
     .top-bar {
       background-color: #222; /* สีเทาเข้ม */
-      padding: 5px 20px;
+      padding: 25px 20px;
       font-size: 14px;
       color: #ccc;
       position: relative;
       z-index: 10;
+      margin-bottom: 5px;
     }
 
     .top-bar a {
@@ -45,14 +46,14 @@
       color: #ff4c4c; /* สีแดงเข้ม */
       font-weight: bold;
       font-size: 18px;
-      padding: 10px 20px;
+      padding: 15px 10px;
       position: relative;
       z-index: 10;
     }
 
     .menu {
       background-color: #333; /* สีเทาเข้ม */
-      padding: 8px;
+      padding: 8px 10px;
       position: relative;
       z-index: 10;
     }
@@ -68,9 +69,8 @@
     .container {
       display: flex;
       justify-content: center; /* กึ่งกลางแนวนอน */
-      padding: 20px;
       box-sizing: border-box;
-      max-width: 960px; /* กำหนดความกว้างไม่เต็มจอ */
+      max-width: 980px; /* กำหนดความกว้างไม่เต็มจอ */
       margin: 0 auto; /* กึ่งกลางหน้าจอ */
     }
 
@@ -79,7 +79,7 @@
     }
 
     .right {
-      max-width: 700px;
+      max-width: 1000px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -87,7 +87,33 @@
       margin: 0 auto;
     }
 
-    .box {
+    .box1 {
+      background-color: #333; /* สีเทาเข้ม */
+      border: 2px solid #ff4c4c; /* สีแดงเข้ม */
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .box1 h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #ff4c4c; /* สีแดงเข้ม */
+      font-size: 16px;
+    }
+    .box2 {
+      background-color: #333; /* สีเทาเข้ม */
+      border: 2px solid #ff4c4c; /* สีแดงเข้ม */
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .box2 a {
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .box3 {
       background-color: #333; /* สีเทาเข้ม */
       border: 2px solid #ff4c4c; /* สีแดงเข้ม */
       margin-bottom: 20px;
@@ -96,7 +122,7 @@
       width: 100%;
     }
 
-    .box h3 {
+    .box3 h3 {
       margin-top: 0;
       color: #ff4c4c; /* สีแดงเข้ม */
       font-size: 16px;
@@ -198,7 +224,7 @@
       display: flex;
       gap: 20px;
       width: 100%;
-      max-width: 900px;
+      max-width: 2000px;
       border: 2px solid #ff4c4c; /* ขอบสีแดงเข้ม */
       padding: 10px;
       box-sizing: border-box;
@@ -208,21 +234,32 @@
 
     .profilepic-box {
       flex: 1;
-      max-width: 300px;
+      max-width: 200px;
       border-right: 1px solid #ff4c4c; /* ขอบสีแดงเข้ม */
       padding-right: 20px;
       box-sizing: border-box;
     }
 
+    .profilepic-box h {
+      margin-top: 8;
+      border-bottom: 1px solid #ff4c4c; /* ขอบแดง */
+      padding-bottom: 8px;
+    }
+
+    .profilepic-box a {
+      color: #ff4c4c; /* สีแดงเข้ม */
+      text-decoration: none;
+    }
+
     .profileinfo-box {
-      flex: 2;
+      flex: 3;
       padding: 0 20px;
       box-sizing: border-box;
       border-right: 1px solid #ff4c4c; /* ขอบสีแดงเข้ม */
     }
 
     .stats-box {
-      flex: 1;
+      flex: 2;
       padding-left: 20px;
       box-sizing: border-box;
     }
@@ -267,8 +304,8 @@
     }
 
     .friend-pic {
-      width: 100px; /* กำหนดความกว้าง */
-      height: 100px; /* กำหนดความสูง */
+      width: 80px; /* กำหนดความกว้าง */
+      height: 80px; /* กำหนดความสูง */
       object-fit: cover;
       border: 2px solid #ff4c4c; /* ขอบสีแดงเข้ม */
       border-radius: 0; /* เปลี่ยนจากวงกลมเป็นสี่เหลี่ยม */
@@ -280,7 +317,7 @@
   <button id="btnPlay">▶️ เล่นเพลง</button>
 
   <div class="top-bar">
-    Hello6 | My Profile | Friends | Messages | Logout
+    <a href="#">Hello6 | My Profile | Friends | Messages</a> 
   </div>
 
   <div class="header">
@@ -303,7 +340,8 @@
     <div class="right">
       <div class="combined-box">
         <div class="profilepic-box">
-          <img src="IMG_8956.jpg" class="profile-pic" alt="Profile Pic" />
+          <img src="../images/45d0f206-8b55-4d7f-8b48-ae1b0ed9d0f3.jpg" class="profile-pic" alt="Profile Pic" />
+	  <center><h><a href="#">View All 46 Photos</a></h></center>
           <p><a href="#">Send Message</a></p>
           <p><a href="#">Leave Comment</a></p>
           <p><a href="#">Add to Favorites</a></p>
@@ -318,6 +356,8 @@
               <tr><td class="label">Birthday</td><td class="value">November 21</td></tr>
               <tr><td class="label">Location</td><td class="value">โลกมืด</td></tr>
               <tr><td class="label">Relationship Status</td><td class="value">ดิ่งอยู่ 😢</td></tr>
+              <tr><td class="label">Religion</td><td class="value">Buddhist/Taoist</td></tr>
+              <tr><td class="label">Languages</td><td class="value">Thai</td></tr>
             </tbody>
           </table>
         </div>
@@ -328,22 +368,45 @@
           <p>Views: 387</p>
           <p>Photos: 25</p>
           <p>Scraps: 19</p>
-        </div>
-      </div>
-
-      <div class="box">
-        <h3>Recent Updates</h3>
+	<h3>Journal</h3>
         <p>Jun 10: ลากันด้วยเพลง</p>
         <p>Apr 15: นักเดินทาง</p>
         <p>Apr 3: Falling Slowly (OST)</p>
+
+        </div>
       </div>
 
-      <div class="box">
+      <div class="box1">
+        <h3>Recent Updates</h3>
+      </div>
+
+      <div class="box2">
+        <a href="#">Privacy Setting</a>
+	<a href="#">View my Friends' Updates</a>
+      </div>
+
+      <div class="box3">
+        <h3>Today</h3>
+        <p>Thanwarat Pantharot updated his statas to ไม่มีใครเห็นน้ำตาในความมืด...</p>
+        <h3>Yesterday</h3>
+        <p>Thanwarat Pantharot updated his statas to ยังฟัง Retrospect อยู่</p>
+      </div>
+
+      <div class="box1">
         <h3>Friends</h3>
+      </div>
+
+      <div class="box2">
+	<a href="#">View all 140 friends</a>
+        <a href="#">Top Friends</a>
+	<a href="#">Friends Circles</a>
+      </div>
+
+      <div class="box3">
         <div class="friends-list">
           <div class="friend-item">
-            <img src="friend1.jpg" alt="Friend 1" class="friend-pic" />
-            <p>Oh</p>
+	    <p>Oh</p>
+            <img src="IMG_8956.jpg" alt="Friend 1" class="friend-pic" />
           </div>
           <div class="friend-item">
             <img src="friend2.jpg" alt="Friend 2" class="friend-pic" />
@@ -371,7 +434,7 @@
   </div>
 
   <audio id="bgmusic" autoplay loop muted hidden>
-    <source src="../thanwarat/Retrospect.mp3" type="audio/mpeg" />
+    <source src="../musics/Retrospect.mp3" type="audio/mpeg" />
     เบราว์เซอร์ของคุณไม่รองรับการเล่นเสียง
   </audio>
 
