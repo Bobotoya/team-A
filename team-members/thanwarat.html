@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello6 - โปรไฟล์แบบ Hi5</title>
+  <title>Hello6 - โปรไฟล์ของ Thanwarat Pantharot</title>
   <style>
     html, body {
       height: 100%;
@@ -15,7 +15,8 @@
 
     body {
       font-family: Tahoma, sans-serif;
-      background: black url('images/background.jpg') repeat;
+      background: black url('../images/thanwarat/background.gif') repeat;
+      background-size: cover;
       color: white;
       position: relative;
     }
@@ -26,25 +27,30 @@
     }
 
     .top-bar {
-      background-color: #222; /* สีเทาเข้ม */
+      background-color: #F5F5F5;
       padding: 25px 20px;
       font-size: 14px;
-      color: #ccc;
+      color: #858585;
       position: relative;
       z-index: 10;
       margin-bottom: 5px;
     }
 
     .top-bar a {
-      color: #b0b0b0; /* สีเทาอ่อน */
+      color: #858585; 
       margin-right: 10px;
       text-decoration: none;
     }
 
+    .top-bar h {
+      color: #858585; 
+      margin-left: 10px;
+    }
+
     .header {
-      background-color: black;
-      color: #ff4c4c; /* สีแดงเข้ม */
-      font-weight: bold;
+      background: black url('../images/thanwarat/header.jpg') repeat;
+      background-size: cover;
+      color: #ffffff;
       font-size: 18px;
       padding: 15px 10px;
       position: relative;
@@ -52,15 +58,16 @@
     }
 
     .menu {
-      background-color: #333; /* สีเทาเข้ม */
+      background: black url('../images/thanwarat/menu.jpg') repeat;
+      background-size: cover;
       padding: 8px 10px;
       position: relative;
+      font-size: 14px;
       z-index: 10;
     }
 
     .menu a {
       color: #ff4c4c; /* สีแดงเข้ม */
-      font-weight: bold;
       margin-right: 15px;
       text-decoration: none;
     }
@@ -78,7 +85,7 @@
       display: none; /* ซ่อนช่องว่างซ้าย */
     }
 
-    .right {
+    .middle {
       max-width: 1000px;
       width: 100%;
       display: flex;
@@ -88,8 +95,8 @@
     }
 
     .box1 {
-      background-color: #333; /* สีเทาเข้ม */
-      border: 2px solid #ff4c4c; /* สีแดงเข้ม */
+      background: black url('../images/thanwarat/box1.jpg') repeat;
+      background-size: cover;
       padding: 10px;
       box-sizing: border-box;
       width: 100%;
@@ -99,41 +106,48 @@
       margin-top: 0;
       margin-bottom: 0;
       color: #ff4c4c; /* สีแดงเข้ม */
-      font-size: 16px;
+      font-size: 14px; 
     }
     .box2 {
-      background-color: #333; /* สีเทาเข้ม */
-      border: 2px solid #ff4c4c; /* สีแดงเข้ม */
+      background: black url('../images/thanwarat/box2.jpg') repeat;
+      background-size: cover;
       padding: 10px;
       box-sizing: border-box;
+      font-size: 14px;
       width: 100%;
     }
     .box2 a {
       margin-right: 10px;
       text-decoration: none;
+      color: #7a0000;
     }
 
     .box3 {
-      background-color: #333; /* สีเทาเข้ม */
-      border: 2px solid #ff4c4c; /* สีแดงเข้ม */
+      background: black url('../images/thanwarat/box3.jpg') repeat;
+      background-size: cover;
       margin-bottom: 20px;
       padding: 10px;
       box-sizing: border-box;
+      font-size: 14px;
+      color: #ff0000;
       width: 100%;
     }
 
     .box3 h3 {
       margin-top: 0;
       color: #ff4c4c; /* สีแดงเข้ม */
-      font-size: 16px;
-      border-bottom: 1px dashed #ff4c4c; /* ขอบแดง */
+      font-size: 14px;
+      font-weight: normal;
+      border-bottom: 1px solid #ff4c4c; /* ขอบแดง */
       padding-bottom: 5px;
     }
 
     .profile-pic {
-      width: 100%;
-      border: 3px solid #ff4c4c; /* ขอบสีแดงเข้ม */
-      border-radius: 5px;
+      width: 80%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border: 1px solid #ffffff; /* ขอบสีแดงเข้ม */
+      border-radius: 0px;
       margin-bottom: 10px;
     }
 
@@ -165,9 +179,9 @@
     /* กลิตเตอร์ลอย */
     .glitter {
       position: fixed;
-      width: 40px;
-      height: 40px;
-      background-image: url('https://i.imgur.com/IxgvDO3.gif');
+      width: 150px;
+      height: 150px;
+      background-image: url('star.gif');
       background-size: cover;
       pointer-events: none;
       animation: float 6s linear infinite;
@@ -190,31 +204,31 @@
     @keyframes glitter {
       0%, 100% {
         text-shadow:
-          0 0 5px #fff,
-          0 0 10px #ff66cc,
-          0 0 20px #ff66cc,
-          0 0 30px #ff66cc,
-          0 0 40px #ff66cc,
-          0 0 50px #ff66cc,
-          0 0 60px #ff66cc;
+          0 0 5px #000000,
+          0 0 10px #a70000,
+          0 0 20px #a70000,
+          0 0 30px #a70000,
+          0 0 40px #a70000,
+          0 0 50px #a70000,
+          0 0 60px #a70000;
         opacity: 1;
       }
       50% {
         text-shadow:
-          0 0 2px #fff,
-          0 0 5px #ff99cc,
-          0 0 10px #ff99cc,
-          0 0 15px #ff99cc,
-          0 0 20px #ff99cc,
-          0 0 25px #ff99cc,
-          0 0 30px #ff99cc;
+          0 0 2px #000000,
+          0 0 5px #ff5050,
+          0 0 10px #ff5050,
+          0 0 15px #ff5050,
+          0 0 20px #ff5050,
+          0 0 25px #ff5050,
+          0 0 30px #ff5050;
         opacity: 0.7;
       }
     }
 
     .glitter-text {
       animation: glitter 2s infinite ease-in-out;
-      color: #ff66cc; /* สีม่วงอมชมพู */
+      color: #ffffff;
       font-weight: bold;
       user-select: none;
     }
@@ -225,42 +239,58 @@
       gap: 20px;
       width: 100%;
       max-width: 2000px;
-      border: 2px solid #ff4c4c; /* ขอบสีแดงเข้ม */
       padding: 10px;
       box-sizing: border-box;
       margin-bottom: 20px;
-      background-color: #333; /* สีเทาเข้ม */
+      background: black url('../images/thanwarat/main.jpg') repeat;
+      background-size: cover;
+      font-size: 14px;
+      color: #ff4c4c;
     }
 
     .profilepic-box {
       flex: 1;
       max-width: 200px;
-      border-right: 1px solid #ff4c4c; /* ขอบสีแดงเข้ม */
       padding-right: 20px;
       box-sizing: border-box;
     }
 
     .profilepic-box h {
-      margin-top: 8;
-      border-bottom: 1px solid #ff4c4c; /* ขอบแดง */
-      padding-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .profilepic-box h1 {
+      font-size: 14px;
+            font-weight: normal;
     }
 
     .profilepic-box a {
-      color: #ff4c4c; /* สีแดงเข้ม */
+      color: #7a0000;
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .line {
+      width: 155px;
+      padding: 3px;
+      border-bottom: 1px solid #ff4c4c;
+      margin-bottom: 10px;
     }
 
     .profileinfo-box {
-      flex: 3;
-      padding: 0 20px;
+      flex: 2.5;
+      padding: 10 20px;
       box-sizing: border-box;
-      border-right: 1px solid #ff4c4c; /* ขอบสีแดงเข้ม */
+    }
+
+    .profileinfo-box a{
+      text-decoration: none;
+      color: #7a0000;
     }
 
     .stats-box {
-      flex: 2;
-      padding-left: 20px;
+      flex: 2.5;
+      padding-left: 10px 20px;
       box-sizing: border-box;
     }
 
@@ -268,48 +298,105 @@
     table.info-table {
       width: 100%;
       border-collapse: collapse;
-      color: white;
+      margin-bottom: 10px;
+    }
+
+    table.info-table a{
+      text-decoration: none;
+      color: #7a0000;
     }
 
     table.info-table td {
-      padding: 4px 8px;
+      padding: 4px 0px;
       vertical-align: top;
     }
 
     table.info-table td.label {
-      width: 40%;
-      font-weight: bold;
-      color: #ff4c4c; /* สีแดงเข้ม */
+      width: 55%;
       white-space: nowrap;
     }
 
     table.info-table td.value {
-      width: 60%;
+      width: 45%;
     }
 
-    a.special-link {
-      color: #ff66cc; /* สีม่วงอมชมพู */
-      text-decoration: underline;
-    }
-
-    /* เพื่อนรูปสี่เหลี่ยม */
     .friends-list {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .friend-item {
       text-align: center;
     }
 
+    .friend-item a{
+      text-decoration: none;
+      color: #ff0000;
+    }
+
     .friend-pic {
       width: 80px; /* กำหนดความกว้าง */
       height: 80px; /* กำหนดความสูง */
       object-fit: cover;
-      border: 2px solid #ff4c4c; /* ขอบสีแดงเข้ม */
       border-radius: 0; /* เปลี่ยนจากวงกลมเป็นสี่เหลี่ยม */
     }
+
+    .albums-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .album-item {
+      text-align: center;
+    }
+
+    .album-item a{
+      text-decoration: none;
+      color: #ff0000;
+    }
+
+    .album-pic {
+      width: 120px; /* กำหนดความกว้าง */
+      height: 120px; /* กำหนดความสูง */
+      object-fit: cover;
+      border: 10px solid #ffffff; 
+      border-radius: 0; /* เปลี่ยนจากวงกลมเป็นสี่เหลี่ยม */
+    }
+
+    .right {
+    display: flex;
+    justify-content: space-between; /* จัดตำแหน่งกล่องให้ไปอยู่ซ้าย-ขวา */
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    }
+
+    .right > div {
+    width: 49%; /* ให้กล่องมีความกว้างเท่ากัน */
+    }
+
+    .search-container label {
+      font-size: 14px;
+      margin-right: 10px;
+      color: #858585;
+    }
+
+    .search-input {
+      width: 120px;
+      padding: 3px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    .search-input:focus {
+      border-color: #458cff;
+      outline: none;
+    }
+
   </style>
 </head>
 <body>
@@ -317,117 +404,198 @@
   <button id="btnPlay">▶️ เล่นเพลง</button>
 
   <div class="top-bar">
-    <a href="#">Hello6 | My Profile | Friends | Messages</a> 
+    <a href="https://bobotoya.github.io/team-A/">Home</a>
+    <a href="#">My Profile</a>
+    <a href="#">Friends</a>
+    <a href="#">Messages</a> 
+    <a href="#">Groups</a>
+    <h>Search</h>
+    <input type="text" id="search-input" name="search" class="search-input">
+    <a href="#">►</a>
   </div>
 
   <div class="header">
-    Thanwarat Pantharot :: Profile (205 views)
+    <b>Thanwarat Pantharot :: My Profile </b><font size = "2">(1342 views)</font>
   </div>
 
   <div class="menu">
     <a href="#">Profile</a>
-    <a href="#">Friends</a>
     <a href="#">Photos</a>
     <a href="#">Scrapbook</a>
     <a href="#">Journal</a>
     <a href="#">Groups</a>
+    <a href="#">Favorites</a>
+    <a href="#">Applications >></a>
   </div>
   <div class="container">
     <div class="left">
       <!-- Left empty per design, now hidden -->
     </div>
 
-    <div class="right">
+    <div class="middle">
       <div class="combined-box">
         <div class="profilepic-box">
-          <img src="../images/45d0f206-8b55-4d7f-8b48-ae1b0ed9d0f3.jpg" class="profile-pic" alt="Profile Pic" />
-	        <center><h><a href="#">View All 46 Photos</a></h></center>
-          <p><a href="#">Send Message</a></p>
-          <p><a href="#">Leave Comment</a></p>
-          <p><a href="#">Add to Favorites</a></p>
-          <p><a href="#">Use This Skin</a></p>
+          <center><img src="../images/thanwarat/profile.jpg" class="profile-pic" alt="Profile Pic" /></center>
+	  <center><a href="#">View all 46 Photos</a></center>
+	  <center><h><a href="#">Upload Photos >></a></h></center>
+          <center><div class="line"> </div></center>
+          <h1><a href="#">✏️Edit My Basic Info</a></h1>
+          <h1><a href="#">👁️View As Another</a></h1>
+          <h1><a href="#">⭐Change My Skin</a></h1>
+          <h1><a href="#">❎Remove Skin</a></h1>
+          <h1><a href="#">⚙️Add A Widget</a></h1>
         </div>
 
         <div class="profileinfo-box">
+          <p><b>🟠 Online Now</b></p>
+          <p><b>Status:</b> ไม่มีใครเห็นน้ำตาในความมืด... - <a href="#">Edit your status...</a></p>
+	  <p>https://th4nwxr4t.hi5.com - <a href="#">Send it to your friends</a></p>
           <table class="info-table">
             <tbody>
-              <tr><td class="label">Status:</td><td class="value">ไม่มีใครเห็นน้ำตาในความมืด...</td></tr>
-              <tr><td class="label">Sex / Age</td><td class="value">Male / 20</td></tr>
-              <tr><td class="label">Birthday</td><td class="value">November 21</td></tr>
-              <tr><td class="label">Location</td><td class="value">โลกมืด</td></tr>
-              <tr><td class="label">Relationship Status</td><td class="value">ดิ่งอยู่ 😢</td></tr>
-              <tr><td class="label">Religion</td><td class="value">Buddhist/Taoist</td></tr>
-              <tr><td class="label">Languages</td><td class="value">Thai</td></tr>
+              <tr><td class="label"><b>Sex / Age</b></td><td class="value"><b>Birthday</b></td></tr>
+              <tr><td class="label"><font color="#db8894">Male / 20</font></td><td class="value"><font color="#db8894">November 21</font></td></tr>
+            </tbody>
+          </table>
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label"><b>Location</b></td><td class="value"><b>Hometown</b></td></tr>
+              <tr><td class="label"><font color="#db8894">Chiangmai, Thailand</font></td><td class="value"><font color="#db8894">Lampang</font></td></tr>
+            </tbody>
+          </table>
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label"><b>Looking to</b></td></tr>
+              <tr><td class="label"><font color="#db8894">Make friends</font></td></tr>
+            </tbody>
+          </table>
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label"><b>Religion</b></td><td class="value"><b>Languages</b></td></tr>
+              <tr><td class="label"><font color="#db8894">Buddhist/Taoist</font></td><td class="value"><font color="#db8894">Thai</font></td></tr>
             </tbody>
           </table>
         </div>
 
         <div class="stats-box">
-          <h3>Stats</h3>
-          <p>Friends: 140</p>
-          <p>Views: 387</p>
-          <p>Photos: 25</p>
-          <p>Scraps: 19</p>
-	<h3>Journal</h3>
-        <p>Jun 10: ลากันด้วยเพลง</p>
-        <p>Apr 15: นักเดินทาง</p>
-        <p>Apr 3: Falling Slowly (OST)</p>
-
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label"><b>Stats</b></td></tr>
+              <tr><td class="label"><a href="#">666 Friends</a></td><td class="value"><font color="#f59b42">██████████████</font></td></tr>
+              <tr><td class="label"><a href="#">487 Profile Comments</a></td><td class="value"><font color="#f59b42">█████████████</font><font color="#ffffff">▒</font></td></tr>
+              <tr><td class="label"><a href="#">25 Photo Comments</a></td><td class="value"><font color="#f59b42">████</font><font color="#ffffff">▒▒▒▒▒▒▒▒▒▒</font></td></tr>
+              <tr><td class="label"><a href="#">163 Fives</a></td><td class="value"><font color="#f59b42">█████████</font><font color="#ffffff">▒▒▒▒▒</font></td></tr>
+              <tr><td class="label"><a href="#">19 Scraps</a></td><td class="value"><font color="#f59b42">███</font><font color="#ffffff">▒▒▒▒▒▒▒▒▒▒▒</font></td></tr>
+            </tbody>
+          </table>
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label">Contact Info</td></tr>
+              <tr><td class="label"><a href="https://www.instagram.com/thanwxrat.rar">https://www.instagram.com/thanwxrat.rar</a></td></tr>
+              <tr><td class="label"><a href="https://www.facebook.com/yuu.yxu/">https://www.facebook.com/yuu.yxu/</a></td></tr>
+            </tbody>
+          </table>
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label">Journal (<a href="#">View all 2</a>) - <a href="#">Compose</a></td></tr>
+              <tr><td class="label">Jun 11 : <a href="https://youtu.be/fX93wlVj5fI?si=RonKvAR11tgqQ1Dw">ไว้ชีวิตฉันไว้ทำไม</a></td></tr>
+              <tr><td class="label">Mar 15 : <a href="https://youtu.be/l-0bRP-RHgA?si=usYRQny4nChjL3er">Emo Dead Space</a></td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
-      <div class="box1">
-        <h3>Recent Updates</h3>
-      </div>
-
-      <div class="box2">
-        <a href="#">Privacy Setting</a>
-	<a href="#">View my Friends' Updates</a>
-      </div>
-
-      <div class="box3">
-        <h3>Today</h3>
-        <p>Thanwarat Pantharot updated his statas to ไม่มีใครเห็นน้ำตาในความมืด...</p>
-        <h3>Yesterday</h3>
-        <p>Thanwarat Pantharot updated his statas to ยังฟัง Retrospect อยู่</p>
-      </div>
-
-      <div class="box1">
-        <h3>Friends</h3>
-      </div>
-
-      <div class="box2">
-	<a href="#">View all 140 friends</a>
-        <a href="#">Top Friends</a>
-	<a href="#">Friends Circles</a>
-      </div>
-
-      <div class="box3">
-        <div class="friends-list">
-          <div class="friend-item">
-	    <p>Oh</p>
-            <img src="IMG_8956.jpg" alt="Friend 1" class="friend-pic" />
+      <div class="right">
+        <div>
+          <div class="box1">
+            <h3>Recent Updates</h3>
           </div>
-          <div class="friend-item">
-            <img src="friend2.jpg" alt="Friend 2" class="friend-pic" />
-            <p>Witoon</p>
+
+          <div class="box2">
+            <a href="#">Privacy Setting</a>
+            <a href="#">View my Friends' Updates</a>
           </div>
-          <div class="friend-item">
-            <img src="friend3.jpg" alt="Friend 3" class="friend-pic" />
-            <p>VIP</p>
+
+          <div class="box3">
+           <h3>Today</h3>
+           <p>Thanwarat Pantharot <font color="#ff4c4c">updated his statas to</font> ไม่มีใครเห็นน้ำตาในความมืด....</p>
+           <h3>Yesterday</h3>
+           <p>Thanwarat Pantharot <font color="#ff4c4c">has an updated profile page.</font></p>
+	   <h3>Older</h3>
+           <p>Thanwarat Pantharot <font color="#ff4c4c">has joined EMO BOYS. </font><font color="#b0b0b0" font size = "1">(2 days ago)</font>
           </div>
-          <div class="friend-item">
-            <img src="friend4.jpg" alt="Friend 4" class="friend-pic" />
-            <p>chalattorn</p>
+
+          <div class="box1">
+            <h3>About Me</h3>
           </div>
-          <div class="friend-item">
-            <img src="friend5.jpg" alt="Friend 5" class="friend-pic" />
-            <p>Proud</p>
+
+          <div class="box2">
+            <a href="#">Edit About Me</a>
+            <a href="#">Edit Education</a>          
+          </div>
+          <div class="box3">
+            ความเจ็บปวดคือสิ่งเดียวที่ยังยืนยันได้ว่าฉัน "ยังมีตัวตน"
+          </div>
+        </div>
+
+        <div>
+          <div class="box1">
+            <h3>Friends</h3>
+          </div>
+
+          <div class="box2">
+            <a href="#">View all 666 friends</a>
+            <a href="#">Top Friends</a>
+            <a href="#">Invite Friends</a>
+          </div>
+
+          <div class="box3">
+            <div class="friends-list">
+              <div class="friend-item">
+                <a href="https://plangexe.github.io/Team-E-Chai4MiKiao/Team-member/Noppasit.html"><p>Noppasit</p>
+                <img src="../images/thanwarat/noppasit.jpg" alt="Friend 1" class="friend-pic" /></a>
+              </div>
+              <div class="friend-item">
+                <a href="https://bobotoya.github.io/team-A/team-members/Phattarawadee.html"><p>Phattarawadee</p>
+                <img src="../images/thanwarat/Phattarawadee.jpg" alt="Friend 2" class="friend-pic" /></a>
+              </div>
+              <div class="friend-item">
+                <a href="https://bobotoya.github.io/team-A/team-members/kanokrak.html"><p>kanokrak</p>
+                <img src="../images/thanwarat/kanokrak.jpg" alt="Friend 3" class="friend-pic" /></a>
+              </div>
+              <div class="friend-item">
+                <a href="https://bobotoya.github.io/team-A/team-members/weerayut.html"><p>weerayut</p>
+                <img src="../images/thanwarat/weerayut.jpg" alt="Friend 4" class="friend-pic" /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="box1">
+            <h3>Photo Albums</h3>
+          </div>
+
+          <div class="box2">
+            <a href="#">Create a Photo Album</a>
+            <a href="#">Manage Album</a>
+          </div>
+
+          <div class="box3">
+            <div class="albums-list">
+              <div class="album-item">
+                <a href="https://www.instagram.com/p/DKUMP_KyA30/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../images/thanwarat/album1.jpg" alt="album 1" class="album-pic" />
+                <p>DRiP.d Café</p></a>
+              </div>
+              <div class="album-item">
+                <a href="https://www.instagram.com/p/DJLdBBDSP0v/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../images/thanwarat/album2.jpg" alt="album 2" class="album-pic" />
+                <p>OurHours</p></a>
+              </div>
+              <div class="album-item">
+                <a href="https://www.instagram.com/p/DFX8mfeyxCJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="../images/thanwarat/album3.jpg" alt="album 3" class="album-pic" />
+                <p>TANN</p></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
   <div class="footer">
     <span class="glitter-text">Hello6 © 2025 | กลับสู่ความทรงจำของยุค Hi5 ✨</span>
