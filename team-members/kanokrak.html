@@ -1,12 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+  <meta charset="UTF-8">
+  <title>Kanokrak Status</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+   
+    header {
+      flex: 0 0 80px;
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      background: #22382c;
+      color: #fff;
+    }
+
+   
+    main {
+    flex: 1;
+    display: flex;
+    align-items: center;       
+    padding: 40px;
+    background: url('bg_pic.png')
+    
+
+    
+    }
+
+   
+    .item-grid {
+      display: grid;
+      grid-template-columns: 100px 100px;
+      grid-template-rows: 100px 100px;
+      column-gap: 200px;
+      row-gap: 40px;
+      background: transparent;
+    }
+
+    .item {
+      width: 100px;
+      height: 100px;
+      border: 0.5px solid #003366;
+      cursor: pointer;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+   
+    .char-info {
+      border: 2px solid #003366;
+      padding: 10px;
+      width: 400px;
+      height: 200px;
+      background: #fff;
+      margin-left: 200px;
+      background: transparent;
+      
+    }
+
+    .char-info h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .stats {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.6em;
+    }
+
+    
+    footer {
+      flex: 0 0 100px;
+      background: #22382c; 
+      padding: 10px 20px;
+      color: #fff;
+    }
+
+    .recommend h3 {
+      margin: 0 0 10px;
+    }
+
+    .recommend-grid {
+      display: flex;
+      gap: 20px;
+    }
+
+    .recommend-grid .item {
+      width: 100px;
+      height: 100px;
+    }
+
+    
+    .tooltip {
+      position: absolute;
+      background: #fff;
+      border: 2px solid #003366;
+      padding: 15px;
+      width: 250px;
+      display: none;
+      z-index: 1000;
+    }
+
+    .tooltip h4 {
+      margin: 0 0 10px;
+    }
+  </style>
 </head>
 <body>
+ 
+  <header>
+    <div>kanokark</div>
+    <div>ID: 66545202009-2</div>
+  </header>
 
-<h1>hello world</h1>
-<p>This is kanokrak motana</p>
+ 
+  <main>
+   
+    <div class="item-grid">
+      <div class="item" data-name="เสื้อแขนยาวย้วยนิดหน่อย" data-desc="DEF +0" data-type="กันแดดได้นิดหน่อย นํ้าหนักเบาเหมาะกับการสวมใส่ไปใช้ชีวิต"><img src="armor_2.jpg"></div>
+      <div class="item" data-name="สายสิญจน์" data-desc="LUCK +2" data-type="สายสิญจน์จากวัดแถวบ้านใส่ก็ได้ไม่ใส่ก็ได้ แต่ใส่แล้วรู้สึกสบายใจแปลกๆ!!?"><img src="thread_5.jpg"></div>
+      <div class="item" data-name="ยาดม" data-desc="Heal 10 HP" data-type="ช่วยให้อากาศในการหายใจสดชื่นขึ้น"><img src="yadom_3.jpg"></div>
+      <div class="item" data-name="ไม้" data-desc="ATK +1" data-type="ไม้ข้างทางเอามาช่วยในการเดินทาง ไม่ได้จำเป็นขนาดนั้นแต่ถ้ามีก็ดี"><img src="branchii_1.jpg"></div>
+      
+    </div>
 
+    
+    <div class="char-info">
+      <h2>Kanokrak Motana <span style="float:right;">Lv.22</span></h2>
+      <div class="stats">
+        ATK: 10+1 &nbsp;&nbsp; HP: 50+10 &nbsp;&nbsp; LUCK 0+2<br>
+        DEF: 0 &nbsp;&nbsp;&nbsp;  Stamina: 30<br>
+        _________________________________________<br>
+        หญิงสาวผู้ใช้ชีวิตด้วยการเสี่ยงดวง ดวงดีบางคราว แต่โดยส่วนใหญ่แล้วดวงจะกุด
+      </div>
+    </div>
+  </main>
+
+  
+  <footer>
+    <div class="recommend">
+      <h3>ไอเทมแนะนำสำหรับตัวละครนี้</h3>
+      <div class="recommend-grid">
+        <div class="item" data-name="โคฮาคุจัง" data-desc="Heal 999999999+ HP" data-type="ที่พึ่งทางใจขั้นสูง"><img src="kohaku-chan_5.jpg"></div>
+        <div class="item" data-name="ชุดเครื่องนอน" data-desc="Heal 100+ HP" data-type="นอนก่อนแล้วค่อยว่ากัน"><img src="blanket_4.jpg"></div>
+
+      </div>
+    </div>
+  </footer>
+
+  
+  <div id="tooltip" class="tooltip"></div>
+
+  <script>
+    const items = document.querySelectorAll('.item');
+    const tooltip = document.getElementById('tooltip');
+
+    items.forEach(item => {
+      item.addEventListener('mousemove', e => {
+        const name = item.getAttribute('data-name');
+        const desc = item.getAttribute('data-desc');
+        const type = item.getAttribute('data-type');
+
+        if (name) {
+          tooltip.innerHTML = `<h4>${name}</h4>
+                               <p>${desc}</p>
+                               <p>${type}</p>`;
+          tooltip.style.display = 'block';
+          tooltip.style.left = (e.pageX + 20) + 'px';
+          tooltip.style.top = (e.pageY + 20) + 'px';
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 </html>
