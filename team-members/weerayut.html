@@ -1,9 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weerayut Autthiya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       background-image: url("001.jpg");
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+
+    .container {
+       max-width: 800px;
+       margin: 40px auto;
+       background-color: rgba(200, 200, 200, 0.8); /* สีขาวใส 80% */
+       border-radius: 30px;
+       box-shadow: 0 4px 15px rgba(6, 6, 7, 0.2);
+       padding: 30px;
+    }
+
+    h1 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #cce6ff;
+      color: #003366;
+      padding: 5px 12px;
+      border-radius: 15px;
+      margin: 5px 5px 10px 0;
+      font-size: 14px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .profile img {
+      border-radius: 15px;
+      width: 120px;
+      height: 120px;
+      margin-right: 20px;
+    }
+
+    .contact, .about {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      background: #f0f8ff;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 10px;
+      text-decoration: none;
+      color: #004080;
+      font-weight: bold;
+    }
+
+    button {
+      background: #3399ff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 10px 0 0;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #2673cc;
+    }
+  </style>
+</head>
 <body>
 
-<h1>Weerayut Autthiya</h1>
-<p>This is the member page for Weerayut Autthiya.</p>
+  <div class="container">
+    <a href="../index.html">← กลับหน้าแรกทีม</a>
+    <h1>Weerayut Autthiya</h1>
+    <div class="tag">Anime Fan 🎉</div>
+    <div class="tag">Hobby: เล่นเกม</div>
+    <div class="tag">Hobby: อ่านมังงะ</div>
+    <div class="tag">Future: Web Developer</div>
+
+    <div class="profile">
+      <img src="ban.jpg" alt="Profile">
+      <div>
+        <p><b>Team-A</b></p>
+        <p><b>ชอบ:</b> เกม, อนิเมะ, เทคโนโลยี</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <p><b>ติดต่อ</b></p>
+      <a href="mailto:weerayut@example.com">📧 Email</a>
+      <a href="https://facebook.com/">📘 Facebook</a>
+    </div>
+
+    <div class="about">
+      <p><b>เกี่ยวกับฉัน</b></p>
+      <p>🎮 ชอบเล่นเกมออนไลน์ ดูอนิเมะ อ่านมังงะ</p>
+      <p>🎵 ฟังเพลง J-POP และอนิเมะซอง</p>
+      <p>💙 สีน้ำเงินคือสีที่ชอบ</p>
+    </div>
+
+    <button onclick="location.href='../index.html'">ดูหน้า Team</button>
+    <button onclick="alert('กำลังไปหน้าอื่น...')">ไปหน้าเพื่อน</button>
+  </div>
 
 </body>
 </html>
